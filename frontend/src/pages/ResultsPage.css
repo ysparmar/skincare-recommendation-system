@@ -1,0 +1,358 @@
+/* ResultsPage.css */
+.results-page {
+  min-height: 80vh;
+  padding: 48px 0;
+}
+
+.results-header {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.results-header h1 { font-size: 36px; margin-bottom: 10px; }
+.results-header p  { color: var(--text-secondary); font-size: 16px; }
+
+.header-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+/* ── Profile grid ─────────────────────────────── */
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.profile-card { padding: 24px; }
+.profile-card-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+
+/* Acne card */
+.severity-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  margin-bottom: 14px;
+}
+
+.confidence-bar-wrap { margin-bottom: 14px; }
+.confidence-label { font-size: 12px; color: var(--text-secondary); display: block; margin-top: 5px; }
+
+.prob-grid { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+.prob-item { display: grid; grid-template-columns: 100px 1fr 36px; align-items: center; gap: 8px; }
+.prob-label { font-size: 12px; color: var(--text-secondary); }
+.prob-pct   { font-size: 12px; font-weight: 600; text-align: right; }
+
+/* Profile items */
+.profile-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.profile-key { color: var(--text-secondary); }
+.profile-val { font-weight: 600; }
+.concerns-list { margin-top: 12px; }
+.profile-completeness { margin-top: 16px; }
+
+/* Skin tone */
+.tone-swatch-wrap { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
+.tone-swatch { width: 60px; height: 60px; border-radius: 50%; border: 3px solid white; box-shadow: var(--shadow-sm); flex-shrink: 0; }
+.tone-label { font-size: 18px; font-weight: 700; font-family: var(--font-heading); }
+.tone-fitzpatrick { font-size: 13px; color: var(--text-secondary); }
+.tone-hex   { font-size: 12px; color: var(--text-secondary); font-family: monospace; }
+.tone-note  { font-size: 11px; color: var(--text-secondary); font-style: italic; }
+
+/* ── Tabs ─────────────────────────────────────── */
+.results-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 28px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: var(--transition);
+}
+
+.tab-btn:hover { color: var(--primary); }
+.tab-btn.active { color: var(--primary); border-bottom-color: var(--primary); }
+
+.tab-panel { animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ── Category filter ──────────────────────────── */
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+/* ── Product grid ─────────────────────────────── */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+.product-card { padding: 20px; }
+
+.product-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.product-rank {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary-light);
+  font-family: var(--font-heading);
+  min-width: 36px;
+  line-height: 1;
+}
+
+.product-info { flex: 1; }
+.product-name { font-weight: 700; font-size: 15px; line-height: 1.4; margin-bottom: 2px; }
+.product-brand { font-size: 13px; color: var(--text-secondary); }
+
+.product-score {
+  font-size: 24px;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  text-align: right;
+  line-height: 1;
+}
+.score-hint { display: block; font-size: 11px; font-weight: 500; color: var(--text-secondary); font-family: var(--font-body); }
+
+.product-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.product-category {
+  background: var(--bg);
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.product-price {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--primary-dark);
+}
+
+.product-rating { font-size: 13px; color: #F9A825; font-weight: 600; }
+
+.recommendation-reasons { margin-top: 10px; }
+.reason-item { font-size: 12px; color: var(--text-secondary); padding: 3px 0; }
+.reason-item::before { content: ''; }
+
+.expand-btn {
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: var(--primary);
+  cursor: pointer;
+  margin-top: 12px;
+  padding: 4px 0;
+}
+
+.product-detail { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
+.ingredient-snippet, .review-snippet {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* ── Treatments ───────────────────────────────── */
+.treatment-grid { display: grid; gap: 20px; }
+
+.treatment-card h3 { font-size: 16px; margin-bottom: 16px; }
+.treatment-section { margin-bottom: 14px; }
+.treatment-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-secondary); margin-bottom: 8px; }
+.treatment-list { padding-left: 18px; font-size: 13px; color: var(--text-secondary); }
+.treatment-list li { margin-bottom: 4px; }
+.treatment-note { font-size: 14px; color: var(--text-secondary); }
+.treatment-disclaimer { font-size: 11px; color: #aaa; margin-top: 14px; font-style: italic; border-top: 1px solid var(--border); padding-top: 10px; }
+
+.product-reviews,
+.product-mentions {
+  background: #F5F5F5;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.product-mentions {
+  background: #E8F5E9;
+  color: #2E7D32;
+  font-weight: 600;
+}
+
+.card-footer-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.similar-box {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.similar-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.similar-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.similar-item:last-child { border-bottom: none; }
+
+/* ── AM / PM Routine ──────────────────────────── */
+.routine-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.routine-card h3 { font-size: 20px; margin-bottom: 6px; }
+.routine-sub { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
+.routine-steps { display: flex; flex-direction: column; gap: 14px; }
+
+.routine-step-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.routine-step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.routine-step-body { flex: 1; }
+.routine-step-label { font-size: 11px; text-transform: uppercase; font-weight: 700; color: var(--primary-dark); }
+.routine-step-prod  { font-size: 14px; font-weight: 600; margin: 2px 0; }
+.routine-brand      { font-weight: 400; color: var(--text-secondary); }
+.routine-step-reason { font-size: 12px; color: var(--text-secondary); }
+.routine-step-score  { font-size: 15px; font-weight: 700; color: var(--primary); }
+
+/* ── Model Insights Modal ─────────────────────── */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 20px;
+}
+
+.modal-card {
+  max-width: 620px;
+  width: 100%;
+  padding: 28px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-close {
+  background: none;
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.insights-grid { display: grid; gap: 14px; }
+.insight-box {
+  background: var(--bg);
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.insight-label  { font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--primary-dark); }
+.insight-val    { font-size: 15px; font-weight: 700; margin: 4px 0; }
+.insight-sub    { font-size: 13px; color: var(--text-secondary); }
+.insight-metric { font-size: 13px; margin-top: 6px; color: #2E7D32; }
+
+@media print {
+  .no-print, .navbar, .footer { display: none !important; }
+  .results-page { padding: 0; }
+  .card { box-shadow: none; break-inside: avoid; }
+}
+
+@media (max-width: 768px) {
+  .product-grid { grid-template-columns: 1fr; }
+  .profile-grid { grid-template-columns: 1fr; }
+  .routine-grid { grid-template-columns: 1fr; }
+}

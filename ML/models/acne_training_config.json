@@ -1,0 +1,20 @@
+{
+  "epochs": 30,
+  "batch_size": 32,
+  "lr": 0.0002,
+  "dropout": 0.4,
+  "patience": 10,
+  "image_size": 224,
+  "num_classes": 4,
+  "class_names": [
+    "Mild",
+    "Moderate",
+    "Severe",
+    "Very Severe"
+  ],
+  "optimizer": "AdamW",
+  "scheduler": "CosineAnnealingLR",
+  "best_val_acc": 0.7842,
+  "test_acc": 0.7842,
+  "tta_acc": 0.7979
+}

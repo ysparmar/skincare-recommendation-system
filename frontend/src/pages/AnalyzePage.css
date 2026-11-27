@@ -1,0 +1,179 @@
+/* AnalyzePage.css */
+.analyze-page {
+  min-height: 80vh;
+  padding: 48px 0;
+}
+
+/* Progress */
+.analyze-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 40px;
+}
+
+.progress-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.progress-step.active { color: var(--primary); }
+.progress-step.done   { color: var(--success); }
+
+.progress-step-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  background: white;
+  flex-shrink: 0;
+}
+
+.progress-step.done .progress-step-dot {
+  background: var(--success);
+  border-color: var(--success);
+  color: white;
+}
+
+.progress-step.active .progress-step-dot {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.progress-connector {
+  width: 60px;
+  height: 2px;
+  background: var(--border);
+  margin: 0 8px;
+}
+
+/* Step panel */
+.step-panel {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.step-panel h2 { font-size: 28px; margin-bottom: 10px; }
+.step-desc { color: var(--text-secondary); margin-bottom: 32px; font-size: 15px; }
+
+/* Upload zone */
+.upload-zone {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-md);
+  padding: 48px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-bottom: 20px;
+}
+
+.upload-zone:hover {
+  border-color: var(--primary);
+  background: var(--bg);
+}
+
+.upload-zone.has-image {
+  border-style: solid;
+  border-color: var(--primary);
+  padding: 16px;
+  cursor: default;
+}
+
+.upload-icon { font-size: 48px; margin-bottom: 12px; }
+.upload-placeholder p { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.upload-placeholder span { font-size: 13px; color: var(--text-secondary); display: block; }
+.upload-hint { margin-top: 8px !important; font-size: 11px !important; color: #aaa !important; }
+
+.image-preview-wrap { position: relative; display: inline-block; }
+.image-preview {
+  max-height: 280px;
+  max-width: 100%;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+.remove-image {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Checkbox */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.checkbox-label input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary);
+}
+
+/* Step actions */
+.step-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+/* Loading panel */
+.loading-panel { text-align: center; padding: 60px; }
+.loading-steps { margin-top: 24px; display: inline-flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.loading-step { font-size: 14px; color: var(--text-secondary); }
+.loading-step.active { color: var(--primary); font-weight: 500; }
+
+/* Webcam capture */
+.camera-box {
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  text-align: center;
+  background: #000;
+  margin-bottom: 20px;
+}
+
+.camera-video {
+  width: 100%;
+  max-height: 320px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+}
+
+.camera-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+  .analyze-progress { gap: 4px; }
+  .progress-connector { width: 24px; }
+  .upload-zone { padding: 32px 16px; }
+}

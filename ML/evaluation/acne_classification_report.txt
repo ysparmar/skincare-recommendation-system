@@ -1,0 +1,39 @@
+============================================================
+ ACNE Severity Classification — Evaluation Report
+============================================================
+
+Model:        EfficientNet-B0 (Transfer Learning, Full Fine-Tune)
+Dataset:      ACNE04 (Layered-Labs/ACNE04)
+Split:        Canonical Fold 0 (Train/Test)
+Total images: 1457
+
+Training Configuration:
+  Epochs:         30
+  Batch size:     32
+  LR:             0.0002 (differential backbone/head)
+  Optimizer:      AdamW
+  Scheduler:      CosineAnnealingLR
+  Dropout:        0.4
+  Label Smooth:   0.08
+
+Results (Best Validation Checkpoint):
+  Best Train Acc:  0.8970 (89.70%)
+  Best Val Acc:    0.7842 (78.42%)
+  Test Acc (Raw):  0.7842 (78.42%)
+  Test Acc (TTA):  0.7979 (79.79%)
+
+Test Set — Per-Class Metrics (Raw):
+              precision    recall  f1-score   support
+
+        Mild     0.8947    0.6602    0.7598       103
+    Moderate     0.7273    0.8819    0.7972       127
+      Severe     0.7105    0.7500    0.7297        36
+ Very Severe     0.9167    0.8462    0.8800        26
+
+    accuracy                         0.7842       292
+   macro avg     0.8123    0.7846    0.7917       292
+weighted avg     0.8011    0.7842    0.7830       292
+
+
+Note: Sqrt class weights + label smoothing used to balance precision and recall.
+Do not fabricate or modify these numbers.

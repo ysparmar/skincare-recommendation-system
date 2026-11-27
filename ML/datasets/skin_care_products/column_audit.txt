@@ -1,0 +1,16 @@
+
+=== File: productlist.csv ===
+Rows: 237
+Columns (6):
+  'product_ID'                             dtype=int64         nulls=    0  unique=   237
+  'product_name'                           dtype=object        nulls=    0  unique=   237
+  'product_brand'                          dtype=object        nulls=    0  unique=    62
+  'price'                                  dtype=object        nulls=    0  unique=    65
+  'product_description'                    dtype=object        nulls=    0  unique=   237
+  'product_type'                           dtype=object        nulls=    0  unique=    12
+
+=== File: productReviews.csv ===
+Rows: 15040
+Columns (2):
+  'product_id'                             dtype=int64         nulls=    0  unique=   232
+  'review'                                 dtype=object        nulls=    0  unique= 14889

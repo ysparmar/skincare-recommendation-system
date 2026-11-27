@@ -1,0 +1,53 @@
+{
+  "total_products": 237,
+  "total_reviews_linked": 11009,
+  "columns": [
+    "product_id",
+    "product_name",
+    "brand",
+    "price",
+    "product_description",
+    "category",
+    "review_count",
+    "review_text",
+    "reviews_combined",
+    "review_skin_mentions",
+    "price_numeric",
+    "ingredients",
+    "ingredients_clean"
+  ],
+  "categories": {
+    "Cleanser": 40,
+    "Toner": 29,
+    "Other/Spot Treatments": 27,
+    "Moisturizer": 27,
+    "Serum": 26,
+    "Mask": 26,
+    "Essence": 18,
+    "Eye Treatment": 13,
+    "Sun Protection": 11,
+    "Sheet Mask": 8,
+    "Exfoliator": 7,
+    "Lip Treatment": 5
+  },
+  "price_range": {
+    "min": 2.5,
+    "max": 60.0,
+    "mean": 24.27
+  },
+  "missing_values": {
+    "product_id": 0,
+    "product_name": 0,
+    "brand": 0,
+    "price": 0,
+    "product_description": 0,
+    "category": 0,
+    "review_count": 0,
+    "review_text": 53,
+    "reviews_combined": 53,
+    "review_skin_mentions": 53,
+    "price_numeric": 0,
+    "ingredients": 0,
+    "ingredients_clean": 0
+  }
+}

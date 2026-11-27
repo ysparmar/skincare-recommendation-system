@@ -1,0 +1,18 @@
+File: Skincare Treatment Dataset.csv
+Rows: 1120
+Columns:
+  'Age_Group'                         dtype=object        nulls=   0  unique=    5
+    Values: ['14-18', '19-24', '25-36', '37-45', '45+']
+  'Skin_Type'                         dtype=object        nulls=   0  unique=    4
+    Values: ['Normal', 'Dry', 'Oily', 'Combination']
+  'Skin_Subtype'                      dtype=object        nulls=   0  unique=    8
+    Values: ['Normal to Dry', 'Normal to Oily', 'Dry to Normal', 'Extreme Dry', 'Oily to Normal', 'Extreme Oily', 'T-Zone Oily Cheeks Dry', 'T-Zone Dry Cheeks Oily']
+  'Sensitivity'                       dtype=object        nulls=   0  unique=    2
+    Values: ['Yes', 'No']
+  'Concern'                           dtype=object        nulls=   0  unique=   10
+    Values: ['Acne', 'Dark Circles', 'Dark Spots', 'Dullness', 'Hyperpigmentation', 'Open Pores', 'Redness', 'Sun Tan', 'Whiteheads / Blackheads', 'Wrinkles']
+  'Internal_Type'                     dtype=object        nulls=   0  unique=    7
+    Values: ['Comedonal', 'Inflammatory', 'Nodular', 'Cystic', 'Pigmented', 'Vascular', 'General']
+  'Ingredients'                       dtype=object        nulls=   0  unique=  504
+  'Concentrations'                    dtype=object        nulls=   0  unique=  210
+  'Effects'                           dtype=object        nulls=   0  unique=  504

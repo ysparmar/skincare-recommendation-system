@@ -1,0 +1,60 @@
+# ============================================================
+# Hybrid Facial Skin Analysis & Skincare Recommendation System
+# requirements.txt — Python 3.10+
+# ============================================================
+
+# --- Web Framework ---
+flask==3.0.3
+flask-cors==4.0.1
+
+# --- Deep Learning ---
+torch==2.11.0
+torchvision==0.26.0
+
+# --- Machine Learning ---
+scikit-learn==1.5.1
+
+# --- Image Processing ---
+opencv-python-headless==4.10.0.84
+Pillow>=10.4.0
+
+# --- Data Processing ---
+pandas==2.2.2
+numpy>=1.26.4
+
+# --- Visualization ---
+matplotlib==3.9.2
+seaborn==0.13.2
+
+# --- Model Storage ---
+joblib==1.4.2
+
+# --- HuggingFace (ACNE04 dataset) ---
+datasets==2.21.0
+huggingface-hub==0.24.6
+pyarrow>=17.0.0
+
+# --- NLP / TF-IDF ---
+# (included in scikit-learn — no extra package needed)
+
+# --- Utilities ---
+werkzeug==3.0.3
+python-dotenv==1.0.1
+tqdm==4.66.5
+requests==2.32.3
+
+# --- HuggingFace Spaces (Gradio SDK wrapper) ---
+gradio==4.44.0
+a2wsgi==1.10.7
+uvicorn==0.30.6
+
+# --- Testing ---
+pytest==8.3.2
+
+# ============================================================
+# Install with:
+#   pip install -r requirements.txt
+#
+# For GPU (CUDA 12.1):
+#   pip install torch==2.3.1+cu121 torchvision==0.18.1+cu121 --extra-index-url https://download.pytorch.org/whl/cu121
+# ============================================================
